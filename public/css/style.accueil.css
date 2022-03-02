@@ -1,0 +1,28 @@
+body{
+    background-image: url("img-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
+li a{
+    text-decoration: none;
+    font-size: 30px;
+}
+ul{
+    background-color: aqua;
+    width: 99%;
+    height: 250px;
+}
+.jeu{
+    background-color: black;
+    height: 10%;
+    border: solid 10px rgba(230, 225, 225, 0.185);
+    
+}
+.jeu h1{
+    color: white;
+    margin: 1% 0 0 50%;
+}
+
+
+
+

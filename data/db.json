@@ -1,0 +1,25 @@
+{
+    "users":[
+    {
+    "nom_complet":"malick gueye",
+    "login":"joueur@gmail.com",
+    "password":"joueur",
+    "role":"ROLE_JOUEUR",
+    "score":15
+    },
+    {
+    "nom_complet":"papa demba dieng",
+    "login":"admin@gmail.com",
+    "password":"admin",
+    "role":"ROLE_ADMIN",
+    "score":0
+    },
+    {
+        "nom_complet":"soxna dieng",
+        "login":"joueur@gmail.com",
+        "password":"joueur",
+        "role":"ROLE_JOUEUR",
+        "score":17
+        }
+    ]
+}
