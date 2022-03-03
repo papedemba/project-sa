@@ -1,7 +1,8 @@
 {
     "users":[
     {
-    "nom_complet":"malick gueye",
+    "nom":"malick",
+    "prenom":"gueye",
     "login":"joueur@gmail.com",
     "password":"joueur",
     "role":"ROLE_JOUEUR",
@@ -15,7 +16,8 @@
     "score":0
     },
     {
-        "nom_complet":"soxna dieng",
+        "nom":"soxna ",
+        "prenom":"dieng",
         "login":"joueur@gmail.com",
         "password":"joueur",
         "role":"ROLE_JOUEUR",

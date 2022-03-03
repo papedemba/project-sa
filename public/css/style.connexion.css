@@ -3,6 +3,16 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.jeu{
+    background-color: black;
+    height: 10%;
+    border: solid 10px rgba(230, 225, 225, 0.185);
+    
+}
+.jeu h1{
+    color: white;
+    margin: 1% 0 0 50%;
+}
 #container{
     width:400px;
     margin:0 auto;
@@ -46,15 +56,19 @@ input[type=submit] {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 50%;
+    width: 48%;
+}
+.btn{
+    display: flex;
+    justify-content: space-between;
 }
 input[type=submit]:hover {
     background-color: white;
     color: #53af57;
     border: 1px solid #53af57;
 }
-li{
+/* li{
     display: inline-block;
     margin: 10%;
-}
+} */
 

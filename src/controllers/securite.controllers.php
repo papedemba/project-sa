@@ -21,10 +21,13 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 * Traitement des Requetes GET
 */
 if($_SERVER['REQUEST_METHOD']=="GET"){
-    if(isset($_GET['action'])){
-        if($_GET['action'] =='connexion')
+    if(isset($_REQUEST['action'])){
+        if($_REQUEST['action'] =='connexion')
         {
             require_once(PATH_VIEWS.'securite'.DIRECTORY_SEPARATOR.'connexion.html.php');
+        }
+        elseif($_REQUEST['action'] =='deconnexion'){
+            logout();
         }
     }else{
         require_once(PATH_VIEWS.'securite'.DIRECTORY_SEPARATOR.'connexion.html.php');
@@ -33,6 +36,7 @@ if($_SERVER['REQUEST_METHOD']=="GET"){
 }
 //connexion
 function connexion(string $login,string $password):void {
+
     $errors=[];
     champ_obligatoire("login",$login,$errors);
     if(!isset($errors['login'])){
@@ -40,16 +44,16 @@ function connexion(string $login,string $password):void {
     }
         champ_obligatoire("password",$password,$errors);
     if(!isset($errors['login'])){
-        valid_password("password",$password,$errors);
+        //valid_password("password",$password,$errors);
     }
     if(count($errors)==0){
         $userConnect=find_user_login_password($login,$password);
     if(count($userConnect)!=0){
-        $_SESSION[USER_KEY]=$userConnect;  
+        $_SESSION[USER_KEY]=$userConnect; 
     require_once(PATH_VIEWS.'user'.DIRECTORY_SEPARATOR.'accueil.html.php');
 
     // header("location:".WEBROOT."?controller=user&action=accueil");
-    exit();
+    //exit();
     }else{
     $errors['connexion']="Login ou Mot de passe incorrect";
     $_SESSION['errors']=$errors;
@@ -62,10 +66,10 @@ function connexion(string $login,string $password):void {
     exit();
     }
     }
-    /* function logout():void{
+     function logout():void{
         $_SESSION['user_connect']=array();
         unset($_SESSION['user_connect']);
         session_destroy();
         header("location:".WEBROOT);
         exit();
-        } */
+        } 
